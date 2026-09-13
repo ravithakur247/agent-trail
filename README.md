@@ -33,7 +33,7 @@ Once the daemon is running, launch your usual AI coding agent (`claude`, `aider`
 
 ## Screenshot
 
-*(placeholder — add a screenshot or GIF of the live view and history timeline here)*
+![AgentTrail dashboard demo](docs/demo.gif)
 
 ## Architecture
 
