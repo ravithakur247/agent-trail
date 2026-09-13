@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AgentTrail</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <script src="/static/chart.umd.js"></script>
+</head>
+<body>
+  <header>
+    <h1>&gt; agenttrail<span class="cursor">_</span></h1>
+    <nav>
+      <button id="tab-live" class="tab active">live</button>
+      <button id="tab-history" class="tab">history</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="view-live" class="view active">
+      <div id="live-sessions" class="cards"></div>
+      <p id="live-empty" class="empty hidden">no agent sessions detected. run `agenttrail start`, then launch an agent.</p>
+    </section>
+
+    <section id="view-history" class="view">
+      <table id="history-table">
+        <thead>
+          <tr><th>agent</th><th>started</th><th>duration</th><th>peak ram</th><th>commands</th><th>cwd</th></tr>
+        </thead>
+        <tbody id="history-rows"></tbody>
+      </table>
+      <p id="history-empty" class="empty hidden">no past sessions yet.</p>
+    </section>
+
+    <section id="view-detail" class="view">
+      <button id="back-to-history" class="btn-secondary">&larr; back to history</button>
+      <h2 id="detail-title"></h2>
+      <canvas id="detail-chart" height="120"></canvas>
+      <div id="detail-timeline" class="timeline"></div>
+    </section>
+  </main>
+
+  <script src="/static/live.js"></script>
+  <script src="/static/history.js"></script>
+</body>
+</html>
